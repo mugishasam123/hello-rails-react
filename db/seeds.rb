@@ -1,0 +1,5 @@
+Message.create(:greeting => "greetin 1")
+Message.create(:greeting => "greeting 2")
+Message.create(:greeting => "greeting 3")
+Message.create(:greeting => "greeting 4")
+Message.create(:greeting => "greeting 5")

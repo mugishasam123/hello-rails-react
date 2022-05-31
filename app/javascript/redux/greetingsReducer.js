@@ -2,15 +2,16 @@ import Axios from 'axios'
 
 const GET_GREETING = 'hello-rails-react/greetings/GET_GREETING';
 
-const getGreetings=(payload)=>{
-    type: GET_GREETING,
-    payload
-}
+const getGreetings=(payload)=>({
+  type: GET_GREETING,
+  payload
+})
 
 export const getGreetingsFromApi=()=>async(dispatch)=>{
   const result= await Axios.get('/v1/greeting');
-  const message= result.data.greetings.message
+  const message= result.data.greetings.greeting
   dispatch(getGreetings(message))
+  console.log(message)
 }
 
 
